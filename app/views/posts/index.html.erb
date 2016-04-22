@@ -1,0 +1,20 @@
+<div class="container">
+  <br />
+  <br />
+<% if @posts.present? %>
+  <% @posts.order("created_at DESC").each do |post| %>
+      <div class="col-md-4 grow" style="padding: 10px; height: 400px; margin-right: 0px; margin-bottom: 10px;">
+        <div class="col-md-9 cover-right">
+          <div style="display: block; font-weight: 900; text-align: left;">
+            <%= link_to post.title, post_path(post) %>
+          </div>
+          <hr style="margin-bottom: 0; margin-top: 30px;">
+          <br>
+        </div>
+      </div>
+    <% end %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+
+</div>

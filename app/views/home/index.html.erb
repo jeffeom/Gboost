@@ -1,0 +1,14 @@
+<div class="text-center" style="height: auto">
+  <section id="pic" style="display: table;">
+    <div class="textinpic center-block" style="padding: 5%; display: table-cell;">
+      <div>
+        <h2 style="font-size: 5vh"> Welcome to GBoost </h2>
+        <br />
+          <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+            <%= submit_tag "Search" %>
+          <% end %>
+      </div>
+    </div>
+  </section>
+</div>

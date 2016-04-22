@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.my-fluid-container {
+   padding-left: 0;
+   padding-right: 0;
+   margin-left: auto;
+   margin-right: auto;
+}
